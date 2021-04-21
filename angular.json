@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "8e9dcdc6-33da-4ab6-899f-8935c2df8cab"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "productCatalog": {
+    "product-catalog": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/productCatalog",
+            "outputPath": "dist/product-catalog",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "productCatalog:build"
+            "browserTarget": "product-catalog:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "productCatalog:build:production"
+              "browserTarget": "product-catalog:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "productCatalog:build"
+            "browserTarget": "product-catalog:build"
           }
         },
         "test": {
@@ -113,16 +116,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "productCatalog:serve"
+            "devServerTarget": "product-catalog:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "productCatalog:serve:production"
+              "devServerTarget": "product-catalog:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "productCatalog"
+  "defaultProject": "product-catalog"
 }
